@@ -5,7 +5,7 @@
 psql -U postgres -h localhost -p 5432
 ```
 2. Enter the password for your `postgres` user.
-3. Enter the following command.
+3. Enter the following commands.
 ~~~~sql
 CREATE DATABASE backend;
 \c backend
