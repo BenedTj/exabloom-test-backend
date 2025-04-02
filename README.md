@@ -25,4 +25,20 @@ CREATE TABLE MESSAGES (
   content TEXT NOT NULL,
   created_at TIMESTAMP NOT NULL
 );
+\q
 ~~~~
+5. Navigate to `src/db.js` and replace the following with the password for your `postgres` user.
+```javascript
+const pool = new Pool({
+    user: "postgres",
+    password: [REPLACED WITH YOUR PASSWORD],
+    host: "localhost",
+    port: "5432",
+    database: "backend"
+});
+```
+6. Enter the following commands.
+```
+npm install
+npm run populate
+```
