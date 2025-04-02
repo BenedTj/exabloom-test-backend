@@ -1,11 +1,13 @@
 # exabloom-test-backend
 ## System Setup
-1. Enter the following into your command line.
+1. Clone the Github repository.
+`https://github.com/BenedTj/exabloom-test-backend` 
+2. Enter the following into your command line.
 ```
 psql -U postgres -h localhost -p 5432
 ```
-2. Enter the password for your `postgres` user.
-3. Enter the following commands.
+3. Enter the password for your `postgres` user.
+4. Enter the following commands.
 ~~~~sql
 CREATE DATABASE backend;
 \c backend
