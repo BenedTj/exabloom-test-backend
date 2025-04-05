@@ -4,7 +4,7 @@
 ```
 https://github.com/BenedTj/exabloom-test-backend
 ``` 
-3. Enter the following into your command line.
+3. Enter the following into the command line.
 ```
 psql -U postgres -h localhost -p 5432
 ```
@@ -25,7 +25,7 @@ const pool = new Pool({
     database: "backend"
 });
 ```
-6. Enter the following commands.
+6. Enter the following commands into the command line.
 ```
 npm install
 npm run populate
