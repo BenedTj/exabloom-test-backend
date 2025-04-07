@@ -7,7 +7,7 @@ class Queries {
     constructor() {
         // firstDateAfter stores the date to be used as a constraint after calling nextPage().
         this.firstDateAfter = null;
-        // latestDate stores the date to be used as a constraint in the keyset selection.
+        // latestDate stores the date to be used as a constraint in the keyset pagination.
         this.latestDate = null;
         /* previousSearchValue stores the previous searchValue variable
         * in the latest calling of the function searchConversations.
@@ -36,7 +36,7 @@ class Queries {
             let filterParams = [];
             let paramCounter = 1;
 
-            // If latestDate is not null, create constraint to implement keyset selection.
+            // If latestDate is not null, create constraint to implement keyset pagination.
             if (this.latestDate) {
                 filterValues.push(`created_at < $${paramCounter}`);
                 filterParams.push(new Date(this.latestDate));
@@ -100,7 +100,7 @@ class Queries {
                 paramCounter++;
             }
 
-            // If latestDate is not null, create constraint to implement keyset selection.
+            // If latestDate is not null, create constraint to implement keyset pagination.
             if (this.latestDate) {
                 filterValues.push(`created_at < $${paramCounter}`);
                 filterParams.push(this.latestDate);
