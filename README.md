@@ -1,4 +1,4 @@
-# exabloom-test-backend
+# Exabloom Backend Test
 ## System Setup
 1. Clone the Github repository.
 ```
