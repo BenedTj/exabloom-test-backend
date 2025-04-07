@@ -39,7 +39,7 @@ npm run start
 ```
 
 ## System Requirements
-1.resetPage() allows the user to reset pagination settings.
+1. resetPage() allows the user to reset pagination settings.
 2. nextPage() allows the user to go to the next page.
 3. retrieveRecentConversations(pageSize) allows the user to retrieve the next pageSize fields (i.e. for the requirements of the test, retrieveRecentConversations(50)).
 4. searchConversations(pageSize, searchValue) allows the user to retrieve the next pageSize methods with the constraints of searchValue to filter (i.e. for the requirements of the test, searchConversations(50, searchValue)).
@@ -48,6 +48,8 @@ npm run start
 The only assumption made that might affect the accuracy of the query is:
 1. The phone_number field of table CONTACTS and contact_phone_number field of table CONVERSATIONS include the country code of the phone number.
 2. When we run the queries, we expect to receive the name of the contact the message is associated, the content of the message and the date when the message was created.
+3. The created_at and updated_at fields of the CONTACTS table is not null.
+4. The searchConversations(pageSize, searchValue) function resets pagination settings to initial state when a new searchValue is passed in a subsequent call of the function.
 
 ## Design Decisions Made
 1. Contrary to the database schema provided, a field contact_name was added to the table CONTACTS to store the name of the contact, which is used in the filter query.
